@@ -1,10 +1,7 @@
 import { AxiosInstance } from 'axios';
-
-// Common parameter and response types
-export interface PaginationParams {
-  page?: number;
-  page_size?: number;
-}
+import { PaginatedResponse, PaginationParams } from './common';
+import { Volume } from './volumes';
+import { NodeBalancer } from './nodebalancers';
 
 export interface LinodeInstance {
   id: number;
@@ -293,17 +290,6 @@ export interface Kernel {
   deprecated: boolean;
   built: string;
 }
-
-export interface PaginatedResponse<T> {
-  data: T[];
-  page: number;
-  pages: number;
-  results: number;
-}
-
-// Import necessary types
-import { Volume } from './volumes';
-import { NodeBalancer } from './nodebalancers';
 
 export interface LinodeInstancesClient {
   // Instance operations

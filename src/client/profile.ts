@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from 'axios';
-import { PaginatedResponse, PaginationParams } from './instances';
+import { AxiosInstance } from 'axios';
+import { PaginatedResponse, PaginationParams } from './common';
 
 // ScopeDefinition interface (duplicated from schemas.ts to avoid circular references)
 export interface ScopeDefinition {

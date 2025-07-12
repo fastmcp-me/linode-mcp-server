@@ -1,5 +1,5 @@
 import { FastMCP } from 'fastmcp';
-import { createClient, LinodeClient, CreateLinodeRequest, UpdateLinodeRequest, PaginationParams } from '../../client';
+import { createClient, CreateLinodeRequest, UpdateLinodeRequest } from '../../client';
 import * as schemas from './schemas';
 import { withErrorHandling } from '../common/errorHandler';
 

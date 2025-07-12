@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import { AxiosInstance } from 'axios';
 
 export interface SupportClient {
   listTickets(params?: { page?: number; page_size?: number }): Promise<any>;

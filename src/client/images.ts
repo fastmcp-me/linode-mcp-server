@@ -1,5 +1,5 @@
 import { AxiosInstance } from 'axios';
-import { PaginationParams, PaginatedResponse } from './index';
+import { PaginationParams, PaginatedResponse } from './common';
 
 /**
  * Interface for image data

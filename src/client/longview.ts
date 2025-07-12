@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from 'axios';
-import { PaginatedResponse, PaginationParams } from './instances';
+import { AxiosInstance } from 'axios';
+import { PaginatedResponse, PaginationParams } from './common';
 
 export interface LongviewClient {
   id: number;

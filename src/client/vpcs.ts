@@ -1,5 +1,5 @@
 import { AxiosInstance } from 'axios';
-import { PaginatedResponse, PaginationParams } from './instances';
+import { PaginatedResponse, PaginationParams } from './common';
 
 export interface VPC {
   id: number;

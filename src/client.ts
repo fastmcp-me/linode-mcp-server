@@ -85,9 +85,7 @@ export function createClient(context:any, server:any): LinodeClient {
 }
 
 export type { LinodeClient } from './client/index';
-export type { 
-  PaginationParams, 
-  PaginatedResponse, 
+export type {
   LinodeInstance,
   CreateLinodeRequest,
   UpdateLinodeRequest,

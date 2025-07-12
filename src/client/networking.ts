@@ -1,5 +1,5 @@
 import { AxiosInstance } from 'axios';
-import { PaginationParams, PaginatedResponse } from './instances';
+import { PaginatedResponse, PaginationParams } from './common';
 
 export interface IPAddress {
   address: string;
