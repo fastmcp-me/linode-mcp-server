@@ -6,8 +6,8 @@ import { withErrorHandling } from '../common/errorHandler';
 export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
   // IP Address operations
     server.addTool({
-    name: 'get_ip_addresses',
-    description: 'Get all IP addresses',
+    name: 'list_ip_addresses',
+    description: 'list all IP addresses',
     parameters: schemas.getIPAddressesSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const result = await createClient(context, server).networking.getIPAddresses();
@@ -57,8 +57,8 @@ export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
 
   // IPv6 operations
     server.addTool({
-    name: 'get_ipv6_ranges',
-    description: 'Get all IPv6 ranges',
+    name: 'list_ipv6_ranges',
+    description: 'List all IPv6 ranges',
     parameters: schemas.getIPv6RangesSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const result = await createClient(context, server).networking.getIPv6Ranges();
@@ -77,8 +77,8 @@ export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
   });
 
     server.addTool({
-    name: 'get_ipv6_pools',
-    description: 'Get all IPv6 pools',
+    name: 'list_ipv6_pools',
+    description: 'List all IPv6 pools',
     parameters: schemas.getIPv6PoolsSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const result = await createClient(context, server).networking.getIPv6Pools();
@@ -88,8 +88,8 @@ export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
 
   // Firewall operations
     server.addTool({
-    name: 'get_firewalls',
-    description: 'Get all firewalls',
+    name: 'list_firewalls',
+    description: 'List all firewalls',
     parameters: schemas.getFirewallsSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const paginationParams = {
@@ -164,8 +164,8 @@ export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
 
   // Firewall rules operations
     server.addTool({
-    name: 'get_firewall_rules',
-    description: 'Get all rules for a specific firewall',
+    name: 'list_firewall_rules',
+    description: 'List all rules for a specific firewall',
     parameters: schemas.getFirewallRulesSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const result = await createClient(context, server).networking.getFirewallRules(params.firewallId);
@@ -186,8 +186,8 @@ export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
 
   // Firewall device operations
     server.addTool({
-    name: 'get_firewall_devices',
-    description: 'Get all devices for a specific firewall',
+    name: 'list_firewall_devices',
+    description: 'List all devices for a specific firewall',
     parameters: schemas.getFirewallDevicesSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const { firewallId, page, page_size } = params;
@@ -220,8 +220,8 @@ export function registerNetworkingTools(server: FastMCP, client: LinodeClient) {
 
   // VLAN operations
     server.addTool({
-    name: 'get_vlans',
-    description: 'Get all VLANs',
+    name: 'list_vlans',
+    description: 'List all VLANs',
     parameters: schemas.getVLANsSchema,
     execute: withErrorHandling(async (params: any, context?: any) => {
       const paginationParams = {
