@@ -27,6 +27,7 @@ program
   .option('--transport <type>', 'Transport type: stdio (default), sse, http', 'stdio')
   .option('--port <port>', 'Server port (default: 3000 for sse, 8080 for http)', undefined)
   .option('--host <host>', 'Server host (default: 127.0.0.1)', '127.0.0.1')
+  .option('-e, --endpoint <endpoint>', 'Server endpoint path (default: /mcp for http, /sse for sse)')
   .action(async (options) => {
     // If --list-categories was specified, show available categories and exit
     if (options.listCategories) {
